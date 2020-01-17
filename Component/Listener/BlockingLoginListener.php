@@ -14,7 +14,7 @@
 namespace CCDNUser\SecurityBundle\Component\Listener;
 
 use CCDNUser\SecurityBundle\Component\Authorisation\SecurityManagerInterface;
-use Symfony\Component\HttpKernel\Event\ResponseEvent;
+use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 
 /**
@@ -53,9 +53,9 @@ class BlockingLoginListener
      * a log of this will be present in the databse.
      *
      * @access public
-     * @param ResponseEvent $event
+     * @param RequestEvent $event
      */
-    public function onKernelRequest(ResponseEvent $event)
+    public function onKernelRequest(RequestEvent $event)
     {
         if ($event->getRequestType() !== \Symfony\Component\HttpKernel\HttpKernel::MASTER_REQUEST) {
             return;
