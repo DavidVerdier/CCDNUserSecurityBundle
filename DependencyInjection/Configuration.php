@@ -40,8 +40,8 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('ccdn_user_security');
+        $treeBuilder = new TreeBuilder('ccdn_user_security');
+        $rootNode = $treeBuilder->getRootNode();
 
         // Class file namespaces.
         $this->addEntitySection($rootNode);
