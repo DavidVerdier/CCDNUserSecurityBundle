@@ -46,11 +46,10 @@ class LoginFailureTracker
     }
 
     /**
-     *
-     * @access public
-     * @param  string $ipAddress
-     * @param  int    $blockingPeriod
-     * @return array
+     * @param $ipAddress
+     * @param $blockingPeriod
+     * @return \Doctrine\Common\Collections\ArrayCollection
+     * @throws \Exception
      */
     public function getAttempts($ipAddress, $blockingPeriod)
     {

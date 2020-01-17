@@ -30,16 +30,12 @@ use CCDNUser\SecurityBundle\Component\Authentication\Tracker\LoginFailureTracker
 class SecurityManager implements SecurityManagerInterface
 {
     /**
-     *
-     * @access protected
-     * @var \Symfony\Component\HttpFoundation\RequestStack $requestStack
+     * @var RequestStack
      */
     protected $requestStack;
 
     /**
-     *
-     * @access protected
-     * @var \CCDNUser\SecurityBundle\Component\Authentication\Tracker\LoginFailureTracker $loginFailureTracker
+     * @var LoginFailureTracker
      */
     protected $loginFailureTracker;
 
@@ -58,12 +54,11 @@ class SecurityManager implements SecurityManagerInterface
     protected $blockPages;
 
     /**
-     *
-     * @access public
-     * @param \Symfony\Component\HttpFoundation\RequestStack                                $requestStack
-     * @param \CCDNUser\SecurityBundle\Component\Authentication\Tracker\LoginFailureTracker $loginFailureTracker
-     * @param array                                                                         $routeLogin
-     * @param array                                                                         $blockPages
+     * SecurityManager constructor.
+     * @param RequestStack $requestStack
+     * @param LoginFailureTracker $loginFailureTracker
+     * @param $routeLogin
+     * @param $blockPages
      */
     public function __construct(RequestStack $requestStack, LoginFailureTracker $loginFailureTracker, $routeLogin, $blockPages)
     {
@@ -76,9 +71,9 @@ class SecurityManager implements SecurityManagerInterface
     /**
      * If you have failed to login too many times, a log of this will be present
      * in your session and the databse (incase session is dropped the record remains).
-     *
-     * @access public
+     * 
      * @return int
+     * @throws \Exception
      */
     public function vote()
     {

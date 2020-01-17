@@ -14,8 +14,6 @@
 namespace CCDNUser\SecurityBundle\Model\Component\Gateway;
 
 use Doctrine\ORM\QueryBuilder;
-use CCDNUser\SecurityBundle\Model\Component\Gateway\GatewayInterface;
-use CCDNUser\SecurityBundle\Model\Component\Gateway\BaseGateway;
 use CCDNUser\SecurityBundle\Entity\Session;
 
 /**

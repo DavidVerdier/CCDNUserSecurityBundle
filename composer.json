@@ -13,7 +13,10 @@
         }
     ],
     "require": {
-        "php": "^7.0"
+        "php": "^7.2",
+        "symfony/framework-bundle": "^4.4 || 5.0.*",
+        "symfony/orm-pack": "*",
+        "symfony/security-bundle": "^4.4 || 5.0.*"
     },
     "autoload": {
         "psr-0": { "CCDNUser\\SecurityBundle": "" }

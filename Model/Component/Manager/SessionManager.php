@@ -13,9 +13,6 @@
 
 namespace CCDNUser\SecurityBundle\Model\Component\Manager;
 
-use CCDNUser\SecurityBundle\Model\Component\Manager\ManagerInterface;
-use CCDNUser\SecurityBundle\Model\Component\Manager\BaseManager;
-
 use CCDNUser\SecurityBundle\Entity\Session;
 
 /**

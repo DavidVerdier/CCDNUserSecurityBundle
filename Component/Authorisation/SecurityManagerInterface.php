@@ -22,13 +22,11 @@ interface SecurityManagerInterface
     const ACCESS_DENIED_BLOCK = 1;
 
     /**
-     * Constructor
-     *
-     * @access public
-     * @param \Symfony\Component\HttpFoundation\RequestStack                                $requestStack
-     * @param \CCDNUser\SecurityBundle\Component\Authentication\Tracker\LoginFailureTracker $loginFailureTracker
-     * @param array                                                                         $routeLogin
-     * @param array                                                                         $blockPages
+     * SecurityManagerInterface constructor.
+     * @param RequestStack $requestStack
+     * @param LoginFailureTracker $loginFailureTracker
+     * @param $routeLogin
+     * @param $blockPages
      */
     public function __construct(RequestStack $requestStack, LoginFailureTracker $loginFailureTracker, $routeLogin, $blockPages);
 

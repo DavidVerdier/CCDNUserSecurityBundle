@@ -13,9 +13,6 @@
 
 namespace CCDNUser\SecurityBundle\Model\FrontModel;
 
-use CCDNUser\SecurityBundle\Model\FrontModel\BaseModel;
-use CCDNUser\SecurityBundle\Model\FrontModel\ModelInterface;
-
 /**
  *
  * @category CCDNUser
